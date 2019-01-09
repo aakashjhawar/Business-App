@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field eight wide">
     <%= form.label :party_name, placeholder: "Party name" %>
     <%= form.text_field :party_name, class: 'active' %>
   </div>
 
-  <div class="field">
+  <div class="field eight wide">
     <%= form.label :party_code , placeholder: "Party code" %>
     <%= form.number_field :party_code %>
   </div>
@@ -24,4 +24,5 @@
   <div class="actions">
     <%= form.button "Create Party", class: "ui blue submit button" %>  
   </div>
+
 <% end %>
