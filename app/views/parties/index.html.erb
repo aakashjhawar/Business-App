@@ -4,11 +4,7 @@
 
 <br>
 
-
-<button class="ui button">
-  <%= link_to 'Create New Party', new_party_path %>
-</button>
-
+<%= link_to 'Create New Party', new_party_path, class: "ui button blue"%>
 
 <table class="ui celled table">
 
@@ -32,3 +28,7 @@
     <% end %>
   </tbody>
 </table>
+
+<div class="ui center aligned icon header">
+<%= render 'parties/pagination' %>
+</div>
