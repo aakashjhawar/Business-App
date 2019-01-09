@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  party_name: MyString
+  party_code: 1
+
+two:
+  party_name: MyString
+  party_code: 1
