@@ -2,12 +2,21 @@
 
 <h1>Parties</h1>
 
-<table>
+<br>
+
+
+<button class="ui button">
+  <%= link_to 'Create New Party', new_party_path %>
+</button>
+
+
+<table class="ui celled table">
+
   <thead>
     <tr>
-      <th>Party name</th>
-      <th>Party code</th>
-      <th colspan="3"></th>
+      <th class="six wide">Party Name</th>
+      <th class="four wide">Party Code</th>
+      <th class="two wide" colspan="3"></th>
     </tr>
   </thead>
 
@@ -23,7 +32,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Party', new_party_path %>
