@@ -10,6 +10,7 @@
 
   <thead>
     <tr>
+      <th class="one wide">Serial No.</th>
       <th class="six wide">Party Name</th>
       <th class="four wide">Party Code</th>
       <th class="two wide" colspan="3"></th>
@@ -17,8 +18,9 @@
   </thead>
 
   <tbody>
-    <% @parties.each do |party| %>
+    <% @parties.each_with_index do |party, index| %>
       <tr>
+        <td><%= @parties.offset + index +1 %></td>
         <td><%= party.party_name %></td>
         <td><%= party.party_code %></td>
         <td><%= link_to 'Show', party %></td>
