@@ -1,11 +1,7 @@
 <div class="ui inverted menu">
   <div class="ui container">
-	  <a class="active item">
-	    Home
-	  </a>
-	  <a class="item">
-	    Party
-	  </a>
+    <%=link_to 'Home', root_path, class: "active item" %>
+    <%=link_to 'Party', parties_path, class: "item" %>
 	  <div class="right menu">
 	    <div class="ui dropdown item">
 	      Language <i class="dropdown icon"></i>
