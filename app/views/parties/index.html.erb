@@ -29,7 +29,6 @@
   </tbody>
 </table>
 
-
-<div class="ui center aligned icon header">
-<%= will_paginate @parties%>
+<div class="ui center aligned header" >
+<%= will_paginate @parties, renderer: WillPaginateSemanticUi::ActionView::Renderer %>
 </div>
