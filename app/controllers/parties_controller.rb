@@ -4,8 +4,23 @@ class PartiesController < ApplicationController
   # GET /parties
   # GET /parties.json
   def index
-    @parties = Party.paginate(:page => params[:page], :per_page => 7)
+    # @parties = Party.search(params[:search])
+    if params[:search].blank?  
+      @parties = Party.paginate(:page => params[:page], :per_page => 7)
+    else  
+      @parameter = params[:search].downcase  
+      @parties = Party.search(@parameter).paginate(:page => params[:page], :per_page => 7)
+      end
   end
+
+  # def search  
+  #   if params[:search].blank?  
+  #     redirect_to(parties_path, alert: "Empty field!") and return  
+  #   else  
+  #     @parameter = params[:search].downcase  
+  #     @results = Party.search(@parameter)
+  #     end  
+  # end 
 
   # GET /parties/1
   # GET /parties/1.json

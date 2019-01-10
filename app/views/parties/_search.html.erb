@@ -1,0 +1,9 @@
+<%= form_tag(search_page_path, :method => "get", class: 'ui search') do %>  
+  <div class="ui icon input">  
+    <%= search_field_tag :search, params[:search], placeholder: "Party name", class: "prompt" %>  
+    <div class="search icon">  
+    	 &nbsp;&nbsp;&nbsp;&nbsp;
+      <%= button_tag "Search", :class => 'ui button', :name => nil%>  
+    </div>  
+  </div>  
+<% end %>

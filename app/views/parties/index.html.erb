@@ -1,13 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Parties</h1>
+<div class="ui grid">
+    <div class="ten wide column">
+      <h1>Parties</h1>
+    </div>
+    <div class="six wide column right aligned">
+      <%= link_to 'Create New Party', new_party_path, class: "ui button blue"%>
+    </div>
+</div>
 
 <br>
-
-<%= link_to 'Create New Party', new_party_path, class: "ui button blue"%>
+<%= render 'parties/search' %>
+<br>
 
 <table class="ui celled table">
-
   <thead>
     <tr>
       <th class="one wide">Serial No.</th>
