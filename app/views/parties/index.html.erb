@@ -23,7 +23,7 @@
       <th class="one wide">Serial No.</th>
       <th class="six wide">Party Name</th>
       <th class="four wide">Party Code</th>
-      <th class="two wide" colspan="3"></th>
+      <th class="one wide" colspan="1"></th>
     </tr>
   </thead>
 
@@ -33,9 +33,7 @@
         <td><%= @parties.offset + index +1 %></td>
         <td><%= party.party_name %></td>
         <td><%= party.party_code %></td>
-        <td><%= link_to 'Show', party %></td>
-        <td><%= link_to 'Edit', edit_party_path(party) %></td>
-        <td><%= link_to 'Destroy', party, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', party ,class: "ui "%></td>
       </tr>
     <% end %>
   </tbody>
