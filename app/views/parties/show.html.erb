@@ -15,5 +15,8 @@
 </p>
 
 <%= link_to 'Edit', edit_party_path(@party), class: "ui button"%>
+<%= link_to 'Destroy', @party, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui button red" %>
+<br>
+<br>
+
 <%= link_to 'Back', parties_path, class: "ui button"%>
-<%= link_to 'Destroy', @party, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui button" %>
