@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quality_name: MyString
+  shade_no: MyString
+
+two:
+  quality_name: MyString
+  shade_no: MyString

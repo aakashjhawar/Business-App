@@ -1,0 +1,27 @@
+<%= form_with(model: quality, local: true, class: "ui form") do |form| %>
+  <% if quality.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quality.errors.count, "error") %> prohibited this quality from being saved:</h2>
+
+      <ul>
+      <% quality.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field eight wide">
+    <%= form.label :quality_name, placeholder: "Quality name" %>
+    <%= form.text_field :quality_name %>
+  </div>
+
+  <div class="field eight wide">
+    <%= form.label :shade_no, placeholder: "Shade no" %>
+    <%= form.text_field :shade_no %>
+  </div>
+
+  <div class="actions">
+    <%= form.button "Save", class: "ui blue submit button" %>  
+  </div>
+<% end %>

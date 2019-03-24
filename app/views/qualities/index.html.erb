@@ -1,0 +1,45 @@
+<% if notice %>
+  <div class="ui message">
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
+
+<div class="ui grid">
+    <div class="ten wide column">
+      <h1>Qualities</h1>
+    </div>
+    <div class="six wide column right aligned">
+      <%= link_to 'Create New Quality', new_quality_path, class: "ui button blue"%>
+    </div>
+</div>
+
+<br>
+<%= render 'qualities/search' %>
+<br>
+
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th class="one wide">Serial No.</th>
+      <th class="six wide">Party Name</th>
+      <th class="four wide">Party Code</th>
+      <th class="one wide" colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qualities.each_with_index do |quality, index| %>
+      <tr>
+        <td><%= @qualities.offset + index +1 %></td>
+        <td><%= quality.quality_name %></td>
+        <td><%= quality.shade_no %></td>
+        <td><%= link_to 'Show', quality ,class: "ui "%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<div class="ui center aligned header" >
+  <%= will_paginate @parties, renderer: WillPaginateSemanticUi::ActionView::Renderer %>
+</div>

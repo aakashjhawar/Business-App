@@ -8,6 +8,7 @@ class PartiesController < ApplicationController
     if params[:search].blank?  
       @parties = Party.order(:party_name).paginate(:page => params[:page], :per_page => 7)
     else  
+      print("---------------Party---------------") 
       @parameter = params[:search].downcase  
       @parties = Party.search(@parameter).order(:party_name).paginate(:page => params[:page], :per_page => 7)
       end

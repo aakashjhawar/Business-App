@@ -1,0 +1,23 @@
+<% if notice %>
+<div class="ui message">
+  <p id="notice"><%= notice %></p>
+</div>
+<% end %>
+
+<p>
+  <strong>Quality name:</strong>
+  <%= @quality.quality_name %>
+</p>
+
+<p>
+  <strong>Shade no:</strong>
+  <%= @quality.shade_no %>
+</p>
+
+<%= link_to 'Edit', edit_quality_path(@quality), class: "ui button" %>
+<%= link_to 'Destroy', @quality, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui button red" %>
+
+<br>
+<br>
+
+<%= link_to 'Back', qualities_path, class: "ui button"%>
